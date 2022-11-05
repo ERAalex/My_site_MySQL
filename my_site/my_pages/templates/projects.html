@@ -1,0 +1,95 @@
+{% extends "index_template.html" %}
+
+
+{% block body %}
+
+<!-- Banner -->
+<section id="banner">
+	<h2>Проекты</h2>
+	<p>Можно перейти и посмотреть подробное описание проектов, функционирование.
+		<br>При необходимости можно ознакомиться с кодом на GitHub</br>
+
+	<ul class="actions special">
+		<li><a href="https://t.me/espinosa_python" target="_blank" class="button primary">Написать в телеграмм</a></li>
+		<li><a href="#" class="button">Резюме</a></li>
+	</ul>
+
+
+
+</section>
+
+<!-- Main -->
+<section id="main" class="container">
+
+	<section class="box special">
+		<header class="major">
+			<h3>Все проекты были загружены на хостинг с настройкой Ubuntu-серверов и последующей контейнеризацией</h3>
+			<p>Основные используемые технологии: Python, Django, Flask. MySql, PostgreSql, MongoDB, Docker, HTML, CSS.</p>
+		</header>
+		<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+	</section>
+
+	<section class="box special features">
+		<div class="features-row">
+			<section>
+				<span class="icon solid major fa-duotone fa-flask accent2"></span>
+				<h3>Flask сайт-визитка</h3>
+				<p>Коммерческий проект. Основной стек технологий: Flask, PostgreSql, Docker. Выполнен по заказу
+					частного преподавателя английского языка в соответствии с
+				требованиями заказчика. Все модули на сайте легко изменяются благодаря удобной панели администратора
+				для работы с базой данных (защита доступа). Это дает возможность собственнику сайта самому изменять контент не
+					обращаясь к разработчику.</p>
+				<ul class="actions special">
+					<li><a href="http://school.gym205.ru/" target="_blank" class="button primary">просмотр проекта</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<span class="icon solid major fa-chart-area accent3"></span>
+				<h3>Django-проект гимназии 205</h3>
+				<p>Коммерческий проект. Основной стек технологий: Django, MySql. Выполнен по заказу кафедры иностранных
+					 языков ГБОУ гимназии № 205. В дальнейшем управление проектом было передано информатикам
+					 гимназии. (Без дальнейшей поддержки сайт)</p>
+				<ul class="actions special">
+					<li><a href="http://school.gym205.ru/" target="_blank" class="button primary">просмотр проекта</a></li>
+				</ul>
+			</section>
+
+	</section>
+
+
+	<section class="box special features">
+		<div class="features-row">
+			<section>
+				<span class="icon solid major fa-user-secret accent6"></span>
+				<h3>Проект по пропускному контролю</h3>
+				<p>Учебный проект. Основной стек технологий: Flask, PostgreSql, Docker. В проекте продумана архитектура
+					по взаимодействию как базы данных с Flask, так и оповещение и рассылка qr-code сотрудникам
+					предприятия в определенное время через TelegramBot для использования на проходной
+					(предоставление сотрудникам охраны). Все qr-code имеют динамическую информацию, что исключает
+					повторное использование через определенный промежуток времени.</p>
+				<ul class="actions special">
+					<li><a href="http://school.gym205.ru/" target="_blank" class="button primary">просмотр проекта</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<span class="icon solid major fa-hand-holding-usd accent4"></span>
+				<h3>Django-проект магазин</h3>
+				<p>Учебный проект. Основной стек технологий: Django, PostgreSql, Docker. В проекте развитая система
+				просмотра товара (можно сортировать по производителю, цене, т.д.), наличие пагинации. Выполнена
+					форма регистрации новых клиентов, а также функционирующая корзина с сохранением сессий.</p>
+				<ul class="actions special">
+					<li><a href="http://school.gym205.ru/" target="_blank" class="button primary">просмотр проекта</a></li>
+				</ul>
+			</section>
+
+	</section>
+
+
+
+</section>
+
+
+{% endblock %}
+
