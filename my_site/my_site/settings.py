@@ -119,6 +119,16 @@ USE_I18N = True
 USE_TZ = True
 
 
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'erapyth@gmail.com'
+EMAIL_HOST_PASSWORD = 'cdckiucrsowjuoxd'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 

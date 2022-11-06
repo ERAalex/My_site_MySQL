@@ -71,18 +71,23 @@
 
 									<h3 align="center">Опыт работы.</h3>
 									<p>2010 - 2021 - преподавание иностранных языков
-										(испанский - C1, английский)</p>
-									<p>2014 - 2018 - работа переводчиком испанского языка в ведущих компаниях
-										Санкт-Петербурга: Arctur Travel, Marko Tour, SpbTickets, Intourist</p>
-									<p>2022 - 2023 - обучение python-developer на курсах Нетологии </p>
-									<p>2022 - выполнен ряд коммерческих проектов на заказ</p>
+										(испанский - C1).
+									<br>2014 - 2018 - работа переводчиком испанского языка в ведущих
+										компаниях Санкт-Петербурга по работе с иностранными клиентами:
+										Arctur Travel, Marko Tour, SpbTickets, Intourist.</br>
+									2022 - 2023 - обучение python-developer на курсах Нетологии. Диплом о переквалификации.
+									<br>2022 - 2023 - обучение на курсе Django: создание функциональных веб-приложений.</br>
+									2022 - выполнен ряд коммерческих проектов на заказ.</p>
 
 									<h3 align="center">Стек технологий:</h3>
-									<p>Python, Flask, Django Rest Framework </p>
-									<p>Docker, GitHub, HTML, CSS </p>
+									<p>Python, Flask, Django Rest Framework
+									<br>Docker, GitHub, HTML, CSS </br></p>
 
 									<h3 align="center">Базы данных:</h3>
 									<p>PostgreSql, MySql, MongoDB</p>
+
+									<h3 align="center">Знание иностранных языков:</h3>
+									<p>Английский - B2 (advanced),  Испанский - C1</p>
 
 								</div>
 
@@ -129,10 +134,11 @@
 							<span class="label">Telegram</span></a></li>
 					</ul>
 
-					<form>
+					<form method="post" action="#">
+						{% csrf_token %}
 						<div class="row gtr-50 gtr-uniform">
 							<div class="col-8 col-12-mobilep">
-								<input type="email" name="email" id="email" placeholder="Email Address" />
+								{{ form.email }}
 							</div>
 							<div class="col-4 col-12-mobilep">
 								<input type="submit" value="Отправить" class="fit" />
@@ -168,3 +174,6 @@
 
 	</body>
 </html>
+
+
+
