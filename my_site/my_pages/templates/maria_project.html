@@ -1,0 +1,96 @@
+{% extends "index_template.html" %}
+
+
+{% block body %}
+
+<!-- Banner -->
+<section id="banner">
+	<h2>Сайт-визитка преподавателя иностранных языков</h2>
+	<p>коммерческий проект</p>
+	<ul class="actions special">
+		<li><a href="https://t.me/espinosa_python" target="_blank" class="button primary">GitHub</a></li>
+		<li><a href="{% url 'projects' %}" class="button">Вернуться к проектам</a></li>
+	</ul>
+
+
+
+</section>
+
+<!-- Main -->
+<section id="main" class="container">
+
+	<section class="box special">
+		<header class="major">
+			<h3>Проект загружен на Ubuntu-сервер, через Docker</h3>
+				<ul class="actions special">
+					<li><a href="https://github.com/ERAalex/py-homework-basic-files" target="_blank"
+						   class="button primary">просмотр проекта</a></li>
+				</ul>
+			Стек технологий: Python, Flask, PostgreSql, Docker, HTML, CSS
+		</header>
+		<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+	</section>
+
+	<section class="box special features">
+		<div class="features-row">
+			<section>
+				<span class="icon solid major fa-object-group accent2"></span>
+				<h3>Современный дизайн</h3>
+				<p>Сайт выполнен в соответствии с требованиями заказчика. Поддерживается на мобильных устройствах,
+				планшетах. Стильный дизайн удобно отображает нужную информацию, поддерживается возможность
+				отправки письма преподавателю или сообщения в Telegram. Для улучшения отображения сайта
+				применены различные JS script.</p>
+				<ul class="actions special">
+					<li><a href="http://school.gym205.ru/" target="_blank" class="button primary">просмотр</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<span class="icon solid major fa-database accent3"></span>
+				<h3>Удобная работа с БД</h3>
+				<p>Отображение базы данных в удобном для пользователя html-шаблоне. Все изображения, тексты на сайте
+				вынесены в БД, что дает возможность изменять практически все на сайте не обращаясь к программисту.</p>
+				{% for x in maria_project %}
+					<ul class="actions special">
+						<li><a href="{{x.bg_image }}" target="_blank" class="button primary">просмотр</a></li>
+					</ul>
+				{% endfor %}
+			</section>
+
+	</section>
+
+
+	<section class="box special features">
+		<div class="features-row">
+			<section>
+				<span class="icon solid major fa-user-secret accent2"></span>
+				<h3>Безопасность</h3>
+				<p>Контроль доступа к изменению данных в БД. Проверка ввода данных</p>
+				{% for x in maria_project_control_admin %}
+					<ul class="actions special">
+						<li><a href="{{x.sm_image }}" target="_blank" class="button primary">просмотр</a></li>
+					</ul>
+				{% endfor %}
+			</section>
+
+			<section>
+				<span class="icon solid major fa-brands fa-server accent3"></span>
+				<h3>Docker-compose</h3>
+				<p>Развертывание и запуск веб-приложения выполнено в его рабочей среде через Docker на
+					сервере Ubuntu, хостинге.</p>
+				{% for x in maria_project_docker %}
+					<ul class="actions special">
+						<li><a href="{{x.sm_image }}" target="_blank" class="button primary">просмотр</a></li>
+					</ul>
+				{% endfor %}
+			</section>
+
+	</section>
+
+
+
+</section>
+
+
+{% endblock %}
+
