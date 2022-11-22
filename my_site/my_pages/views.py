@@ -15,6 +15,7 @@ def index(request):
 
 
 
+
 def projects(request):
     # блок отправки письма
     form = email_check(request)
