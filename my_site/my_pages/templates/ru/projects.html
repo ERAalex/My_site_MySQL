@@ -1,0 +1,130 @@
+{% extends "ru_index.html" %}
+
+
+{% block body %}
+
+<!-- Banner -->
+<section id="banner">
+	<h2>Проекты</h2>
+	<p>Перейдите на проект, чтобы посмотреть подробное описание, а также их функционирование.
+		<br>При необходимости можно ознакомиться с кодом на GitHub</br>
+
+	<ul class="actions special">
+		<li><a href="https://t.me/espinosa_python" target="_blank" class="button primary">Написать в телеграмм</a></li>
+		<li><a href="#" class="button">Резюме</a></li>
+	</ul>
+
+
+
+</section>
+
+<!-- Main -->
+<section id="main" class="container">
+
+	<section class="box special">
+		<header class="major">
+			<h3>Все проекты были загружены как на хостинг различных серверов, так и
+				подняты собственные сервера Ubuntu и последующей контейнеризацией</h3>
+			<p>Основные используемые технологии: Python, Django, Flask. MySql, PostgreSql, MongoDB, Docker, HTML, CSS.</p>
+		</header>
+	</section>
+
+	<section class="box special features">
+		<div class="features-row">
+			<section>
+				<span class="icon solid major fa-duotone fa-flask accent2"></span>
+				<h3>Flask сайт-визитка</h3>
+				<p>Коммерческий проект. Основной стек технологий: Flask, PostgreSql, Docker. Выполнен по заказу
+					частного преподавателя английского языка в соответствии с
+				требованиями заказчика. Все модули на сайте легко изменяются благодаря удобной панели администратора
+				для работы с базой данных (защита доступа). Это дает возможность собственнику сайта самому изменять контент не
+					обращаясь к разработчику.</p>
+				<ul class="actions special">
+					<li><a href="{% url 'maria_project' %}" target="_blank" class="button primary">просмотр проекта</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<span class="icon solid major fa-chart-area accent3"></span>
+				<h3>Django-проект гимназии 205</h3>
+				<p>Коммерческий проект. Основной стек технологий: Django, MySql. Выполнен по заказу кафедры иностранных
+					 языков ГБОУ гимназии № 205. Сайт был загружен на хостинг - Hostland с последующей настройкой.
+					В дальнейшем управление проектом было передано информатикам
+					 гимназии. (Без дальнейшей поддержки сайт)</p>
+				<ul class="actions special">
+					<li><a href="http://school.gym205.ru/" target="_blank" class="button primary">просмотр проекта</a></li>
+				</ul>
+			</section>
+	</section>
+
+
+	<section class="box special features">
+		<div class="features-row">
+			<section>
+				<span class="icon solid major fa-user-secret accent6"></span>
+				<h3>Проект по пропускному контролю</h3>
+				<p>Учебный проект. Основной стек технологий: Flask, PostgreSql, Docker. В проекте продумана архитектура
+					по взаимодействию как базы данных с Flask, так и оповещение и рассылка qr-code сотрудникам
+					предприятия в определенное время через TelegramBot для использования на проходной
+					(предоставление сотрудникам охраны). Все qr-code имеют динамическую информацию, что исключает
+					повторное использование через определенный промежуток времени.</p>
+				<ul class="actions special">
+					<li><a href="#" target="_blank" class="button primary">просмотр проекта</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<span class="icon solid major fa-hand-holding-usd accent4"></span>
+				<h3>Django-проект магазин</h3>
+				<p>Учебный проект. Основной стек технологий: Django, PostgreSql, Docker. В проекте развитая система
+				просмотра товара (можно сортировать по производителю, цене, т.д.), наличие пагинации. Выполнена
+					форма регистрации новых клиентов, а также функционирующая корзина с сохранением сессий.</p>
+				<ul class="actions special">
+					<li><a href="http://school.gym205.ru/" target="_blank" class="button primary">просмотр проекта</a></li>
+				</ul>
+			</section>
+	</section>
+
+
+	<section class="box special features">
+		<div class="features-row">
+			<section>
+				<span class="icon solid major fa-project-diagram accent6"></span>
+				<h3>Различные небольшие проекты</h3>
+				Учебные проекты. Разнообразные программы несущие в себе небольшой функционал:
+					<p align="left">- TelegramBot
+					<br>- Парсинг сайтов</br>
+					- Перенос фотографий из VK на Yandex Disc
+
+					</p>
+				<ul class="actions special">
+
+					<li><a href="https://github.com/ERAalex" target="_blank" class="button primary">просмотр проекта</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<span class="icon solid major fa-hand-holding-usd accent4"></span>
+				<h3>Командный проект.</h3>
+				<p> Учебный проект в составе команды. Создание VK-bot для знакомств.
+					В ходе проекта велась работа в Git (решение merge конфликтов и т.д.). В результате командной работы
+					было решено разделить весь блок на 3 задачи: Работа с БД PostgreSQL (в дальнейшем была
+					заменена на MongoDB), Работа с API VK, работа с самим Ботом. В данном проекте мною была проведена
+					работа по планированию структуры, организации работы каждому участнику (роль тим-лида), проверка
+					кода и последующее осуществление взаимодействия функций блока БД с блоком Vk API в самом боте.</p>
+				<ul class="actions special">
+					<li><a href="https://github.com/ERAalex/Netology_Collective_work"
+						   target="_blank" class="button primary">просмотр проекта</a></li>
+				</ul>
+			</section>
+	</section>
+
+
+
+
+
+</section>
+
+
+{% endblock %}
+

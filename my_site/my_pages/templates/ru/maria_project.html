@@ -1,0 +1,121 @@
+{% extends "ru_index.html" %}
+
+
+{% block body %}
+
+<!-- Banner -->
+<section id="banner">
+	<h2>Сайт-визитка преподавателя иностранных языков</h2>
+	<p>коммерческий проект</p>
+	<ul class="actions special">
+		<li><a href="{% url 'index' %}" target="_blank" class="button primary">На главную</a></li>
+		<li><a href="{% url 'projects' %}" class="button">Вернуться к проектам</a></li>
+	</ul>
+
+
+
+</section>
+
+<!-- Main -->
+<section id="main" class="container">
+
+	<section class="box special">
+		<header class="major">
+			<h3>Проект загружен на Хостинг REG.RU с полной настройкой и подключением к базе данных, кроме того подключен
+				SSL протокол и осуществлен переход на https. Так же поднята отдельная версия на Хостинге
+				Vdsina на отдельном Ubuntu-сервере, установлен в ручную Docker с последующей настройкой.</h3>
+				<ul class="actions special">
+					<li><a href="https://espinosamaria.ru/" target="_blank"
+						   class="button primary">просмотр итогового варианта проекта</a></li>
+				</ul>
+			Стек технологий: Python, Flask, PostgreSql, Docker, HTML, CSS
+		</header>
+	</section>
+
+	<section class="box special features">
+		<div class="features-row">
+			<section>
+				<span class="icon solid major fa-object-group accent2"></span>
+				<h3>Современный дизайн</h3>
+				<p>Сайт выполнен в соответствии с требованиями заказчика. Поддерживается на мобильных устройствах,
+				планшетах. Стильный дизайн удобно отображает нужную информацию, поддерживается возможность
+				отправки письма преподавателю или сообщения в Telegram.
+				<p align="left">Мною выполнено:<br>
+					- полностью вся настройка и коррекция файлов css<br>
+					- настройка html шаблонов.<br>
+					- подключение JS скриптов.</p>
+
+				{% for x in maria_style %}
+				<ul class="actions special">
+					<li><a href="{{x.bg_image }}" target="_blank" class="button primary">просмотр</a></li>
+				</ul>
+				{% endfor %}
+
+			</section>
+
+			<section>
+				<span class="icon solid major fa-database accent3"></span>
+				<h3>Удобная работа с БД</h3>
+				<p>Отображение базы данных в удобном для пользователя html-шаблоне. Все изображения, тексты на сайте
+				вынесены в БД, что дает возможность изменять практически все на сайте не обращаясь к программисту.</p>
+				<p align="left">Мною выполнено:<br>
+					- сайт выполнен в двух вариантах, с базой MySQL / PostgreSQL.<br>
+					- создание панели доступа, для возможности изменения контента самим клиентом.<br>
+					- настройка доступа к панели изменения данных.<br>
+					- запросы к БД для вывода информации.</p>
+				{% for x in maria_project %}
+					<ul class="actions special">
+						<li><a href="{{x.bg_image }}" target="_blank" class="button primary">просмотр</a></li>
+					</ul>
+				{% endfor %}
+
+			</section>
+
+	</section>
+
+
+	<section class="box special features">
+		<div class="features-row">
+			<section>
+				<span class="icon solid major fa-user-secret accent2"></span>
+				<h3>Безопасность</h3>
+				<p>Продуманы различные возможности по защите как работы сайта, так и контента.</p>
+				<p align="left">Мною выполнено:<br>
+					- создание панели доступа к БД.<br>
+					- подключение сертификатов SSL для перехода с http на https для блокировки рекламы и защиты
+					контента.<br>
+				    - сокрытие чувствительной информации в переменных окружения. </p>
+				{% for x in maria_project_control_admin %}
+					<ul class="actions special">
+						<li><a href="{{x.sm_image }}" target="_blank" class="button primary">просмотр</a></li>
+					</ul>
+				{% endfor %}
+
+			</section>
+
+			<section>
+				<span class="icon solid major fa-brands fa-server accent3"></span>
+				<h3>Docker-compose</h3>
+				<p>Развертывание и запуск веб-приложения выполнено в его рабочей среде через Docker на
+					сервере Ubuntu, хостинге VDSINA.</p>
+				<p align="left">Мною выполнено:<br>
+					- подготовлен образ сайта в dockerfile с последующим pull в docker hub.<br>
+					- на удаленном сервере Ubuntu через командную строку поднят Docker, скачены образы c docker hub.<br>
+					- создан файл docker-compose.yml через командную строку и редактор VIM.<br>
+				    - запуск сайта на удаленном серевер в DOCKER. </p>
+				{% for x in maria_project_docker %}
+					<ul class="actions special">
+						<li><a href="{{x.sm_image }}" target="_blank" class="button primary">просмотр</a></li>
+					</ul>
+				{% endfor %}
+			</section>
+
+	</section>
+
+
+
+</section>
+
+
+{% endblock %}
+

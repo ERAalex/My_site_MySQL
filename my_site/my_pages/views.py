@@ -11,7 +11,7 @@ def index(request):
     form = email_check(request)
     mi_foto1 = Image_data.objects.filter(title='mi_foto1')
     mi_foto2 = Image_data.objects.filter(title='mi_foto2')
-    return render(request, 'index.html', {'mi_foto2': mi_foto2, 'mi_foto1': mi_foto1, 'form': form})
+    return render(request, 'ru_index.html', {'mi_foto2': mi_foto2, 'mi_foto1': mi_foto1, 'form': form})
 
 
 
@@ -19,7 +19,7 @@ def index(request):
 def projects(request):
     # блок отправки письма
     form = email_check(request)
-    return render(request, 'projects.html', {'form': form})
+    return render(request, 'ru/projects.html', {'form': form})
 
 
 
@@ -27,12 +27,14 @@ def maria_project(request):
     maria_project_img = Project_images.objects.filter(title='maria_project')
     maria_project_control_admin = Project_images.objects.filter(title='maria_project_control_admin')
     maria_project_docker = Project_images.objects.filter(title='maria_project_docker')
+    maria_style_css = Project_images.objects.filter(title='maria_project_style_dec')
     form = email_check(request)
-    return render(request, 'maria_project.html',
+    return render(request, 'ru/maria_project.html',
                   {'form': form,
                       'maria_project': maria_project_img,
                       'maria_project_control_admin': maria_project_control_admin,
-                      'maria_project_docker': maria_project_docker})
+                      'maria_project_docker': maria_project_docker,
+                      'maria_style': maria_style_css})
 
 
 # def control_project(request):
