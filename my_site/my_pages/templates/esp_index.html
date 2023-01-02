@@ -1,0 +1,211 @@
+{% load static %}
+
+<html>
+	<head>
+		<title>Espinosa Rozov</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/assets/css/main_my.css" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+
+	</head>
+	<body class="landing is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header" class="alt">
+					<h1><a href="index.html">E.R.A.</a> Python developer</h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="{% url 'esp_index' %}">Inicio</a></li>
+							<li>
+								<a href="#" class="icon solid fa-angle-down">Menu</a>
+								<ul>
+									<li><a href="{% url 'esp_index' %}">Inicio</a></li>
+									<li><a href="https://github.com/ERAalex"
+							   target="_blank">GitHub</a></li>
+									<li><a href="{% static 'images/foto/python_junior_RU_Espinosa_Rozov.pdf' %}"
+							   target="_blank">Curriculum</a></li>
+									<li><a href="{% url 'projects' %}">Proyectos</a></li>
+								</ul>
+							</li>
+
+							</li>
+							<li><a href="{% url 'eng_index' %}" target="_blank" class="button">ENG</a></li>
+							<li><a href="{% url 'index' %}" target="_blank" class="button">RU</a></li>
+						</ul>
+					</nav>
+				</header>
+
+
+			{% block body %}
+
+
+			<!-- Banner -->
+				<section id="banner">
+					<h2>Espinosa Rozov Alexander</h2>
+					<p>Desarrollador Python</p>
+					<ul class="actions special">
+						<li><a href="{% static 'images/foto/python_junior_ENG_Espinosa_Rozov.pdf' %}"
+							   target="_blank" class="button primary">Mi currículum</a></li>
+						<li><a href="{% url 'projects' %}" class="button">Conocer más sobre los proyectos</a></li>
+					</ul>
+				</section>
+
+			<!-- Main -->
+				<section id="main" class="container">
+
+					<section class="box special">
+						<header class="major">
+							<h2>Bienvenido a mi página</h2>
+							<p>Soy un desarrollador de python</p>
+						</header>
+					</section>
+
+					<section class="box special features">
+						<div class="features-row">
+							<section>
+<!--								<h3>Python developer</h3>-->
+								{% for x in mi_foto2 %}
+								<img src="{{ x.artimage.url }}" width=80% >
+								{% endfor %}
+								<p></p>
+								{% for s in mi_foto1 %}
+								<img src="{{ s.artimage.url }}" width=80% >
+								{% endfor %}
+								<p></p>
+							</section>
+
+							<section>
+								<span class="icon solid major fa-chart-area accent3"></span>
+
+								<div class = "index_need_1">
+
+									<h3 align="center">Experiencia laboral.</h3>
+									<p>2010-2021-enseñanza de idiomas (español-C1). <br>
+										- Escuela estatal № 205<br>
+										- Cursos privados de idiomas<br>
+									<br>2014 - 2022 - trabajo como un intérprete de español en las
+								empresas mas importantes de San Petersburgo, trabajo con los clientes extranjeros:
+										Arctur Travel, Marko Tour, SpbTickets, Intourist.<br>
+										- La organización del dia del grupo, control de la ejecución de los programas.<br>
+										- La comunicación con los clientes en español.<br>
+										- La solución de los conflictos.<br><br>
+
+									2022 - 2023 - Cursos de python-developer en Netología (9 meses). Diploma de recalificación.<br><br>
+									2022 - 2023 - Cursos de Programación en Python para profesores de infomatica. Certificado. <br>
+									<br>2022 - 2023 - Curso de Django: creación de aplicaciones web.(2 meses). Certificado. <br><br>
+									2022 - Realización de varios proyectos por encargo.</p>
+
+
+									<h3 align="center">Tecnologías:</h3>
+									<p>Python, Flask, Django Rest Framework
+									<br>Docker, GitHub, HTML, CSS </br></p>
+
+									<h3 align="center">Databases:</h3>
+									<p>PostgreSQL, MySQL, MongoDB</p>
+
+
+								</div>
+
+							</section>
+						</div>
+					</section>
+
+					<div class="row">
+						<div class="col-6 col-12-narrower">
+
+							<section class="box special">
+								<h3>Conocimientos de idiomas:</h3>
+								<p>Inglés - B2 (upper-intermediate)</br> Español - C1</p><br>
+								<ul class="actions special">
+<!--									<li><a href="#" class="button alt">Learn More</a></li>-->
+								</ul>
+							</section>
+
+						</div>
+						<div class="col-6 col-12-narrower">
+
+							<section class="box special">
+								<h3>Contactos</h3>
+								<p>mobíl: +79117861595 <br>
+								email: erapyth@gmail.com</p>
+								<ul class="icons">
+									<li><a href="https://t.me/espinosa_python" target="_blank" class="icon brands fa-telegram">
+										<span class="label">Telegram</span></a></li>
+									<li><a href="https://t.me/espinosa_python" target="_blank" class="icon brands fa-whatsapp">
+										<span class="label">Whatsapp</span></a></li>
+									<li><a href="https://github.com/ERAalex"
+										   target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									<li><a href="https://www.linkedin.com/in/alexander-espinosarozov-156a5825b/" target="_blank"
+										   class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								</ul>
+							</section>
+
+						</div>
+					</div>
+
+				</section>
+
+				{% endblock %}
+
+			<!-- CTA -->
+				<section id="cta">
+
+					{% if messages %}
+					{% for message in messages %}
+					<div class="alert alert-success alert-dismissible fade show" role="alert">
+						<h3><font color ="brown">{{ message }}</font></h3>
+					</div>
+					{% endfor %}
+					{% endif %}
+
+					<h2>Si está interesado en mis servicios</h2>
+					<ul class="icons">
+						escríbame su correo electrónico, o envíe un mensaje en el Telegram -
+						<li><a href="https://t.me/espinosa_python" target="_blank" class="icon brands fa-telegram">
+							<span class="label">Telegram</span></a></li>
+					</ul>
+
+					<form method="post" action="#">
+						{% csrf_token %}
+						<div class="row gtr-50 gtr-uniform">
+							<div class="col-8 col-12-mobilep">
+								{{ form.email }}
+							</div>
+							<div class="col-4 col-12-mobilep">
+								<input type="submit" value="Enviar" class="fit" />
+							</div>
+						</div>
+					</form>
+
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="https://t.me/espinosa_python" target="_blank" class="icon brands fa-telegram">
+							<span class="label">Telegram</span></a></li>
+						<li><a href="https://github.com/ERAalex"
+							   target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://www.linkedin.com/in/alexander-espinosarozov-156a5825b/" target="_blank"
+							   class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; All rights reserved.</li><li>Espinosa Rozov</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.dropotron.min.js"></script>
+			<script src="static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+</html>

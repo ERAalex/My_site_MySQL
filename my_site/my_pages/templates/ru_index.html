@@ -31,8 +31,8 @@
 							</li>
 
 							</li>
-							<li><a href="https://t.me/espinosa_python" target="_blank" class="button">ENG</a></li>
-							<li><a href="https://t.me/espinosa_python" target="_blank" class="button">ESP</a></li>
+							<li><a href="{% url 'eng_index' %}" target="_blank" class="button">ENG</a></li>
+							<li><a href="{% url 'esp_index' %}" target="_blank" class="button">ESP</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -83,23 +83,29 @@
 
 									<h3 align="center">Опыт работы.</h3>
 									<p>2010 - 2021 - преподавание иностранных языков
-										(испанский - C1).
-									<br>2014 - 2018 - работа переводчиком испанского языка в ведущих
+										(испанский - C1). <br>
+										- ГБОУ гимназия № 205<br>
+										- Частные курсы по иностранным языкам<br>
+									<br>2014 - 2022 - работа переводчиком испанского языка в ведущих
 										компаниях Санкт-Петербурга по работе с иностранными клиентами:
-										Arctur Travel, Marko Tour, SpbTickets, Intourist.</br>
-									2022 - 2023 - обучение python-developer на курсах Нетологии. Диплом о переквалификации.
-									<br>2022 - 2023 - обучение на курсе Django: создание функциональных веб-приложений.</br>
+										Arctur Travel, Marko Tour, SpbTickets, Intourist.<br>
+										- организация распорядка дня группы, контроль выполнения программ.<br>
+										- общение с клиентами на иностранном языке.<br>
+										- решение конфликтных ситуаций.<br><br>
+
+									2022 - 2023 - Обучение python-developer на курсах Нетологии. Диплом о переквалификации.<br><br>
+									2022 - 2023 - Углубленное программирование на Python для учителей. Сертификат. <br>
+									<br>2022 - 2023 - обучение на курсе Django: создание функциональных веб-приложений.<br><br>
 									2022 - выполнен ряд коммерческих проектов на заказ.</p>
+
 
 									<h3 align="center">Стек технологий:</h3>
 									<p>Python, Flask, Django Rest Framework
 									<br>Docker, GitHub, HTML, CSS </br></p>
 
 									<h3 align="center">Базы данных:</h3>
-									<p>PostgreSql, MySql, MongoDB</p>
+									<p>PostgreSQL, MySQL, MongoDB</p>
 
-									<h3 align="center">Знание иностранных языков:</h3>
-									<p>Английский - B2 (advanced),  Испанский - C1</p>
 
 								</div>
 
@@ -111,10 +117,10 @@
 						<div class="col-6 col-12-narrower">
 
 							<section class="box special">
-								<h3>Sed lorem adipiscing</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+								<h3>Знание иностранных языков:</h3>
+								<p>Английский - B2 (Upper-Intermediate)</br> Испанский - C1</p><br>
 								<ul class="actions special">
-									<li><a href="#" class="button alt">Learn More</a></li>
+<!--									<li><a href="#" class="button alt">Learn More</a></li>-->
 								</ul>
 							</section>
 
@@ -122,10 +128,18 @@
 						<div class="col-6 col-12-narrower">
 
 							<section class="box special">
-								<h3>Accumsan integer</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-								<ul class="actions special">
-									<li><a href="#" class="button alt">Learn More</a></li>
+								<h3>Контакты</h3>
+								<p>телефон: +79117861595 <br>
+								почта: erapyth@gmail.com</p>
+								<ul class="icons">
+									<li><a href="https://t.me/espinosa_python" target="_blank" class="icon brands fa-telegram">
+										<span class="label">Telegram</span></a></li>
+									<li><a href="https://t.me/espinosa_python" target="_blank" class="icon brands fa-whatsapp">
+										<span class="label">Whatsapp</span></a></li>
+									<li><a href="https://github.com/ERAalex"
+										   target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									<li><a href="https://www.linkedin.com/in/alexander-espinosarozov-156a5825b/" target="_blank"
+										   class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 								</ul>
 							</section>
 
@@ -138,6 +152,14 @@
 
 			<!-- CTA -->
 				<section id="cta">
+
+					{% if messages %}
+					{% for message in messages %}
+					<div class="alert alert-success alert-dismissible fade show" role="alert">
+						<h3><font color ="brown">{{ message }}</font></h3>
+					</div>
+					{% endfor %}
+					{% endif %}
 
 					<h2>Если Вас заинтересовали мои услуги</h2>
 					<ul class="icons">
@@ -165,9 +187,10 @@
 					<ul class="icons">
 						<li><a href="https://t.me/espinosa_python" target="_blank" class="icon brands fa-telegram">
 							<span class="label">Telegram</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/ERAalex"
+							   target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://www.linkedin.com/in/alexander-espinosarozov-156a5825b/" target="_blank"
+							   class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 					</ul>
 					<ul class="copyright">
 						<li>&copy; All rights reserved.</li><li>Espinosa Rozov</a></li>
@@ -187,5 +210,3 @@
 
 	</body>
 </html>
-
-
